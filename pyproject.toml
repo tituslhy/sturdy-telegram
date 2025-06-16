@@ -15,4 +15,12 @@ dependencies = [
     "chainlit>=2.5.5",
     "asyncpg>=0.30.0",
     "boto3>=1.38.36",
+    "ipykernel>=6.29.5",
+    "jupyter>=1.1.1",
+    "apache-airflow-providers-qdrant>=1.4.0",
+    "apache-airflow-providers-standard>=1.2.0",
+    "llama-index-embeddings-ollama>=0.6.0",
+    "llama-index-llms-ollama>=0.6.2",
+    "pandas>=2.2.3",
+    "airflow-operators>=0.7.0",
 ]
