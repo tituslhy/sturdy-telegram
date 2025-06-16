@@ -24,4 +24,5 @@ dependencies = [
     "pandas>=2.2.3",
     "airflow-operators>=0.7.0",
     "flask-appbuilder>=4.7.0",
+    "pyarrow>=20.0.0",
 ]
