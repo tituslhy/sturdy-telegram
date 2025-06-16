@@ -1,7 +1,4 @@
 qdrant_storage/
-.chainlit/
-chainlit.md
-frontend/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
