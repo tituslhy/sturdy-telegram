@@ -25,6 +25,7 @@ COLLECTION_NAME = "Airflow_Experiment"
 EMBEDDING_MODEL_NAME = "nomic-embed-text"
 EMBEDDING_DIMENSION = 768
 QDRANT_URL = "http://localhost:6333"
+# QDRANT_URL = "http://qdrant:6333"
 
 # ─── TASKS ─────────────────────────────────────────────────────────────────
 @task
@@ -76,7 +77,10 @@ def ingest_serialized_documents(serialized_docs: List[Dict[str, Any]]) -> None:
     # setup Qdrant vector store
     client = QdrantClient(url=QDRANT_URL)
     aclient = AsyncQdrantClient(url=QDRANT_URL)
-    embed_model = OllamaEmbedding(model_name=EMBEDDING_MODEL_NAME)
+    embed_model = OllamaEmbedding(
+        model_name=EMBEDDING_MODEL_NAME,
+        # base_url="http://ollama:11434",  # Default is localhost:11434
+    )
     vs = QdrantVectorStore(
         client=client,
         aclient=aclient,
@@ -119,7 +123,7 @@ def create_collection(name: str) -> None:
 @dag(
     dag_id="qdrant_document_ingestion",
     start_date=datetime(2025, 1, 1),
-    schedule=None,
+    schedule="@hourly",
     catchup=False,
     default_args={"owner": "airflow", "retries": 2},
     tags=["qdrant", "vector_db", "doc_ingest"],
