@@ -8,3 +8,10 @@ To create a virtual environment with the dependencies installed, simply type in 
 ```
 uv sync
 ```
+
+Ollama is also needed. Visit [Ollama's Download Documentation](https://ollama.com/download) to install Ollama on your machine.
+
+Once done, run
+```
+ollama pull nomic-embed-text
+```
