@@ -1,5 +1,13 @@
 qdrant_storage/
 logs/
+plugins/
+frontend/
+chainlit-datalayer/
+.chainlit/
+chainlit.md
+Dockerfile.airflow-with-uv
+docker-compose.yaml
+docker-compose.override.yaml
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
