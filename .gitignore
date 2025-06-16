@@ -8,6 +8,7 @@ chainlit.md
 Dockerfile.airflow-with-uv
 docker-compose.yaml
 docker-compose.override.yaml
+config/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
