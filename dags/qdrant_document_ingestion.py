@@ -116,7 +116,7 @@ def create_qdrant_collection_if_not_exists(name: str) -> None:
 @dag(
     dag_id="qdrant_document_ingestion",
     start_date=datetime(2025,1,1),
-    schedule_interval=None,
+    schedule=None,
     catchup=False,
     default_args={"owner":"airflow","retries":2},
     tags=["qdrant","vector_db","doc_ingest"],

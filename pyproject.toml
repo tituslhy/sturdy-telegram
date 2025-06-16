@@ -23,4 +23,5 @@ dependencies = [
     "llama-index-llms-ollama>=0.6.2",
     "pandas>=2.2.3",
     "airflow-operators>=0.7.0",
+    "flask-appbuilder>=4.7.0",
 ]
