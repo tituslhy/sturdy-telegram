@@ -2,7 +2,7 @@
 Apache Airflow Playground
 
 <p align="center">
-    <img src=".images/airflow_attempt1.png">
+    <img src="images/airflow_attempt1.png">
 </p>
 
 This GitHub repository is a companion to the Medium article [How to build your own change data capture pipeline using Apache Airflow](https://medium.com/mitb-for-all/how-to-build-your-own-change-data-capture-pipeline-using-apache-airflow-e485fbef82c7)
